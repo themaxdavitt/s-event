@@ -3,14 +3,14 @@ import TypedEmitter from 'typed-emitter';
 import fallback, {Arguments} from './util';
 
 /**
- * Untyped synchronous function to wait on an event from an emitter and return its arguments.
- *
- * @param emitter Anything with a callable property named `once` (unchecked), invoked as: `emitter.once(event, (...args: any[]): void => { ... })`
- * @param event Anything that can be used as a valid event type (unchecked), used for: `emitter.once(event, ...)`
+ * Synchronous function to wait on an event from a `TypedEmitter<...>`.
+ * @param emitter The emitter to temporarily attach a listener for the event on.
+ * @param event The event to listen for.
+ * @returns A tuple (internally an array) of the arguments the event was emitted with.
  */
-export default function on<Events, E extends keyof Events>(
+export default function on<Events, Event extends keyof Events>(
 	emitter: TypedEmitter<Events>,
-	event: E
-): Arguments<Events[E]> {
+	event: Event
+): Arguments<Events[Event]> {
 	return fallback(emitter, event);
 }
