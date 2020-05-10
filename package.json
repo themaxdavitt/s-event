@@ -1,0 +1,61 @@
+{
+	"name": "s-event",
+	"description": "Synchronously wait for an event - please invoke responsibly",
+	"type": "module",
+	"main": "dist/index.js",
+	"types": "dist/index.d.ts",
+	"scripts": {
+		"clean": "rimraf coverage lib",
+		"test": "npm run clean && tsc && xo && jest --coverage"
+	},
+	"keywords": [],
+	"author": "Max Davitt <max@davitt.me>",
+	"license": "MIT",
+	"dependencies": {
+		"deasync": "^0.1.20"
+	},
+	"devDependencies": {
+		"@types/deasync": "^0.1.0",
+		"@types/jest": "^25.2.1",
+		"@types/node": "^13.13.5",
+		"husky": "^4.2.5",
+		"jest": "^25.5.4",
+		"prettier": "^2.0.5",
+		"rimraf": "^3.0.2",
+		"ts-jest": "^25.5.1",
+		"typescript": "^3.8.3",
+		"xo": "^0.30.0"
+	},
+	"optionalDependencies": {
+		"strict-event-emitter-types": "^2.0.0",
+		"typed-emitter": "^1.0.0"
+	},
+	"prettier": {
+		"useTabs": true
+	},
+	"xo": {
+		"ignores": [
+			"lib/"
+		],
+		"prettier": true,
+		"rules": {
+			"@typescript-eslint/prefer-readonly-parameter-types": "off",
+			"no-undef": "off"
+		}
+	},
+	"jest": {
+		"preset": "ts-jest",
+		"testEnvironment": "node",
+		"rootDir": ".",
+		"testPathIgnorePatterns": [
+			"/node_modules/",
+			"/lib/"
+		]
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "npm test",
+			"pre-push": "npm test"
+		}
+	}
+}
