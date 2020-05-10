@@ -5,8 +5,12 @@
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
 	"scripts": {
+		"build": "npm run clean && tsc",
 		"clean": "rimraf coverage lib",
-		"test": "npm run clean && tsc && xo && jest --coverage"
+		"lint": "xo",
+		"test": "jest --coverage",
+		"dev": "tsc --noEmit && xo && jest --coverage",
+		"watch": "nodemon --ext ts --exec \"npm run --silent dev\""
 	},
 	"keywords": [],
 	"author": "Max Davitt <max@davitt.me>",
@@ -20,6 +24,7 @@
 		"@types/node": "^13.13.5",
 		"husky": "^4.2.5",
 		"jest": "^25.5.4",
+		"nodemon": "^2.0.3",
 		"prettier": "^2.0.5",
 		"rimraf": "^3.0.2",
 		"ts-jest": "^25.5.1",
@@ -51,6 +56,9 @@
 			"/node_modules/",
 			"/lib/"
 		]
+	},
+	"nodemonConfig": {
+		"ignore": ["lib/*"]
 	},
 	"husky": {
 		"hooks": {
