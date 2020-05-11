@@ -64,7 +64,9 @@
 		]
 	},
 	"nodemonConfig": {
-		"ignore": ["lib/*"]
+		"ignore": [
+			"lib/*"
+		]
 	},
 	"husky": {
 		"hooks": {
