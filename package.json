@@ -1,5 +1,6 @@
 {
 	"name": "s-event",
+	"version": "1.0.0",
 	"description": "Synchronously wait for an event - please invoke responsibly",
 	"type": "module",
 	"main": "dist/index.js",
@@ -12,7 +13,12 @@
 		"dev": "tsc --noEmit && xo && jest --coverage",
 		"watch": "nodemon --ext ts --exec \"npm run --silent dev\""
 	},
-	"keywords": [],
+	"keywords": [
+		"sync",
+		"wait",
+		"event",
+		"blocking"
+	],
 	"author": "Max Davitt <max@davitt.me>",
 	"license": "MIT",
 	"dependencies": {
