@@ -1,5 +1,5 @@
 {
-	"name": "s-event",
+	"name": "@themaxdavitt/s-event",
 	"version": "1.0.0",
 	"description": "Synchronously wait for an event - please invoke responsibly",
 	"keywords": [

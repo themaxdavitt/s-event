@@ -1,6 +1,6 @@
-# s-event
+# @themaxdavitt/s-event
 
-[![NPM link](https://img.shields.io/npm/v/s-event?style=flat-square)](https://npmjs.com/package/s-event) [![Package license](https://img.shields.io/npm/l/s-event?style=flat-square)](LICENSE) [![standard-readme compliant](https://img.shields.io/badge/readme%20style-standard-green.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)
+[![NPM link](https://img.shields.io/npm/v/@themaxdavitt/s-event?style=flat-square)](https://npmjs.com/package/@themaxdavitt/s-event) [![Package license](https://img.shields.io/npm/l/@themaxdavitt/s-event?style=flat-square)](LICENSE) [![standard-readme compliant](https://img.shields.io/badge/readme%20style-standard-green.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)
 
 Synchronously wait for an event - please invoke responsibly
 
@@ -16,14 +16,14 @@ npm install s-event
 
 Support for multiple "typed emitter" packages is included among separate modules:
 
-- `s-event`: the Node.js [EventEmitter](https://nodejs.org/api/events.html#events_class_eventemitter)
-- `s-event/lib/strict-event-emitter-types`: the [strict-event-emitter-types](https://www.npmjs.com/package/strict-event-emitter-types) package
-- `s-event/lib/tsee`: the [tsee](https://www.npmjs.com/package/tsee) package
-- `s-event/lib/typed-emitter`: the [typed-emitter](https://www.npmjs.com/package/typed-emitter) package
+- `@themaxdavitt/s-event`: the Node.js [EventEmitter](https://nodejs.org/api/events.html#events_class_eventemitter)
+- `@themaxdavitt/s-event/lib/strict-event-emitter-types`: the [strict-event-emitter-types](https://www.npmjs.com/package/strict-event-emitter-types) package
+- `@themaxdavitt/s-event/lib/tsee`: the [tsee](https://www.npmjs.com/package/tsee) package
+- `@themaxdavitt/s-event/lib/typed-emitter`: the [typed-emitter](https://www.npmjs.com/package/typed-emitter) package
 
 These are included as optional dependencies for this package.
 
-Additionally, `s-event/lib/util`'s default export is `on(emitter: any, event: any) => any` - see the doc comment for the assumptions it makes.
+Additionally, `@themaxdavitt/s-event/lib/util`'s default export is `on(emitter: any, event: any) => any` - see the doc comment for the assumptions it makes.
 
 ## Usage
 
@@ -39,7 +39,7 @@ An example using the Node.js EventEmitter:
 ```typescript
 import {strict as assert} from 'assert';
 import {EventEmitter} from 'events';
-import onEventEmitter from 's-event';
+import onEventEmitter from '@themaxdavitt/s-event';
 
 const ee = new EventEmitter();
 
