@@ -19,7 +19,8 @@
 		"url": "themaxdavitt/s-event"
 	},
 	"scripts": {
-		"dev": "rimraf coverage lib && tsc && xo && jest --coverage",
+		"test": "jest --coverage",
+		"dev": "rimraf coverage lib && tsc && xo && npm run --silent test",
 		"watch": "nodemon --ext ts --exec \"npm run --silent dev\"",
 		"prepublishOnly": "npm run --silent dev"
 	},
