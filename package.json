@@ -19,12 +19,9 @@
 		"url": "themaxdavitt/s-event"
 	},
 	"scripts": {
-		"build": "npm run clean && tsc",
-		"clean": "rimraf coverage lib",
-		"lint": "xo",
-		"test": "jest --coverage",
-		"dev": "tsc --noEmit && xo && jest --coverage",
-		"watch": "nodemon --ext ts --exec \"npm run --silent dev\""
+		"dev": "rimraf coverage lib && tsc && xo && jest --coverage",
+		"watch": "nodemon --ext ts --exec \"npm run --silent dev\"",
+		"prepublishOnly": "npm run --silent dev"
 	},
 	"dependencies": {
 		"deasync": "^0.1.20"
@@ -76,8 +73,8 @@
 	},
 	"husky": {
 		"hooks": {
-			"pre-commit": "npm test",
-			"pre-push": "npm test"
+			"pre-commit": "npm run --silent dev",
+			"pre-push": "npm run --silent dev"
 		}
 	}
 }
