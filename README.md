@@ -17,13 +17,13 @@ npm install s-event
 Support for multiple "typed emitter" packages is included among separate modules:
 
 - `s-event`: the Node.js [EventEmitter](https://nodejs.org/api/events.html#events_class_eventemitter)
-- `s-event/strict-event-emitter-types`: the [strict-event-emitter-types](https://www.npmjs.com/package/strict-event-emitter-types) package
-- `s-event/tsee`: the [tsee](https://www.npmjs.com/package/tsee) package
-- `s-event/typed-emitter`: the [typed-emitter](https://www.npmjs.com/package/typed-emitter) package
+- `s-event/lib/strict-event-emitter-types`: the [strict-event-emitter-types](https://www.npmjs.com/package/strict-event-emitter-types) package
+- `s-event/lib/tsee`: the [tsee](https://www.npmjs.com/package/tsee) package
+- `s-event/lib/typed-emitter`: the [typed-emitter](https://www.npmjs.com/package/typed-emitter) package
 
 These are included as optional dependencies for this package.
 
-Additionally, `s-event/util`'s default export is `on(emitter: any, event: any) => any` - see the doc comment for the assumptions it makes.
+Additionally, `s-event/lib/util`'s default export is `on(emitter: any, event: any) => any` - see the doc comment for the assumptions it makes.
 
 ## Usage
 
@@ -58,6 +58,4 @@ Feel free to submit issues if you have any, and pull requests if you want to imp
 
 ## License
 
-MIT License. Copyright © 2020 Max Davitt.
-
-See [`LICENSE`](LICENSE).
+MIT License. Copyright © 2020 Max Davitt. See [`LICENSE`](LICENSE).
