@@ -11,7 +11,7 @@ Despite being almost _irredeemably_ unidiomatic, sometimes being able to synchro
 ## Install
 
 ```sh
-npm install s-event
+npm install @themaxdavitt/s-event
 ```
 
 Support for multiple "typed emitter" packages is included among separate modules:
