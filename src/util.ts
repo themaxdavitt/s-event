@@ -11,7 +11,7 @@ export type Arguments<T> = [T] extends [(...args: infer U) => any]
 
 /**
  * Untyped synchronous function to wait on an event from an emitter.
- * @param emitter Anything with synchronously callable properties `on` and `off` (unchecked), invoked like: `emitter.on(event, listener)` and `emitter.off(event, listener)` where `listener: (...args: any[]) => void`. 
+ * @param emitter Anything with synchronously callable properties `on` and `off` (unchecked), invoked like: `emitter.on(event, listener)` and `emitter.off(event, listener)` where `listener: (...args: any[]) => void`.
  * @param event Anything that can be used as a valid event type (unchecked), invoked like: `emitter.on(event, ...)` and `emitter.off(event, ...)`.
  * @returns An array of the arguments the event was emitted with.
  */
